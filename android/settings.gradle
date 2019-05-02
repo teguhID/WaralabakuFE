@@ -1,0 +1,3 @@
+rootProject.name = 'Waralabaku2'
+
+include ':app'
