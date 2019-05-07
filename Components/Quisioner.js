@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, Image, View, TouchableOpacity, BackHandler } from 'react-native'
-import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
+import RadioForm from 'react-native-simple-radio-button';
 import { connect } from 'react-redux'
 import { Actions } from 'react-native-router-flux';
 
@@ -37,9 +37,9 @@ class Quisioner extends Component {
     render() {
         return (
             <View style={styles.container}>
-             <Text>DEBUGGING MODE</Text>
+             {/* <Text>DEBUGGING MODE</Text>
              <Text>( MODE PENGUSIR SERANGGA )</Text>
-             <Text>PENGAWAKUTUAN</Text>
+             <Text>PENGAWAKUTUAN</Text> */}
               <View style={styles.quisioner}>
                 <Text>Nomor Pertanyaan = { this.props.countQuisioner }</Text>
                 <Text>Jawaban pertanyaan 1 = { this.props.answere1 }</Text>

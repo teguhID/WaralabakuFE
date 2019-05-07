@@ -1,6 +1,5 @@
 import React from 'react';
-import { FlatList, StyleSheet, ScrollView, ActivityIndicator, Button, View, TouchableOpacity  } from 'react-native';
-import { Container, Header, Content, Card, CardItem, Text, Body } from "native-base";
+import { StyleSheet, ScrollView, Text, ActivityIndicator, View, TouchableOpacity  } from 'react-native';
 import { connect } from 'react-redux'
 import { Actions } from 'react-native-router-flux'
 
@@ -17,64 +16,63 @@ class Result extends React.Component {
 
   componentDidMount(){
     return (
-        this.props.answere2 == 'jawaban1' & this.props.answere3 == 'jawaban1' & this.props.answere4 == 'jawaban1' & this.props.answere5 == 'jawaban1' & this.props.answere6 == 'jawaban1'? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData1'):
-        // this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban2' , this.props.answere5 == 'jawaban 1' && this.props.answere6 == 'jawaban1' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData2'):
-        // this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban2' , this.props.answere5 == 'jawaban 2' && this.props.answere6 == 'jawaban1' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData3'):
-        // this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban2' , this.props.answere5 == 'jawaban 2' && this.props.answere6 == 'jawaban2' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData4'):
-        // this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban1' , this.props.answere5 == 'jawaban 2' && this.props.answere6 == 'jawaban1' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData5'):
-        // this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban1' , this.props.answere5 == 'jawaban 2' && this.props.answere6 == 'jawaban2' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData6'):
-        // this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban1' , this.props.answere5 == 'jawaban 1' && this.props.answere6 == 'jawaban2' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData7'):
-        // this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban2' , this.props.answere5 == 'jawaban 1' && this.props.answere6 == 'jawaban2' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData8'):
+        this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban1' && this.props.answere5 == 'jawaban1' && this.props.answere6 == 'jawaban1'? fetch('http://192.168.8.3:8000/api/getData1'):
+        this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban2' && this.props.answere5 == 'jawaban1' && this.props.answere6 == 'jawaban1'? fetch('http://192.168.8.3:8000/api/getData2'):
+        this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban2' && this.props.answere5 == 'jawaban2' && this.props.answere6 == 'jawaban1'? fetch('http://192.168.8.3:8000/api/getData3'):
+        this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban2' && this.props.answere5 == 'jawaban2' && this.props.answere6 == 'jawaban2'? fetch('http://192.168.8.3:8000/api/getData4'):
+        this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban1' && this.props.answere5 == 'jawaban2' && this.props.answere6 == 'jawaban1'? fetch('http://192.168.8.3:8000/api/getData5'):
+        this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban1' && this.props.answere5 == 'jawaban2' && this.props.answere6 == 'jawaban2'? fetch('http://192.168.8.3:8000/api/getData6'):
+        this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban1' && this.props.answere5 == 'jawaban1' && this.props.answere6 == 'jawaban2'? fetch('http://192.168.8.3:8000/api/getData7'):
+        this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban2' && this.props.answere5 == 'jawaban1' && this.props.answere6 == 'jawaban2'? fetch('http://192.168.8.3:8000/api/getData8'):
         
-        // this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban1' , this.props.answere5 == 'jawaban 1' && this.props.answere6 == 'jawaban1' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData9'):
-        // this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban2' , this.props.answere5 == 'jawaban 1' && this.props.answere6 == 'jawaban1' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData10'):
-        // this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban2' , this.props.answere5 == 'jawaban 2' && this.props.answere6 == 'jawaban1' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData11'):
-        // this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban2' , this.props.answere5 == 'jawaban 2' && this.props.answere6 == 'jawaban2' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData12'):
-        // this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban1' , this.props.answere5 == 'jawaban 2' && this.props.answere6 == 'jawaban1' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData13'):
-        // this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban1' , this.props.answere5 == 'jawaban 2' && this.props.answere6 == 'jawaban2' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData14'):
-        // this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban1' , this.props.answere5 == 'jawaban 1' && this.props.answere6 == 'jawaban2' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData15'):
-        // this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban2' , this.props.answere5 == 'jawaban 1' && this.props.answere6 == 'jawaban2' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData16'):
+        this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban1' && this.props.answere5 == 'jawaban1' && this.props.answere6 == 'jawaban1'? fetch('http://192.168.8.3:8000/api/getData9'):
+        this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban2' && this.props.answere5 == 'jawaban1' && this.props.answere6 == 'jawaban1'? fetch('http://192.168.8.3:8000/api/getData10'):
+        this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban2' && this.props.answere5 == 'jawaban2' && this.props.answere6 == 'jawaban1'? fetch('http://192.168.8.3:8000/api/getData11'):
+        this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban2' && this.props.answere5 == 'jawaban2' && this.props.answere6 == 'jawaban2'? fetch('http://192.168.8.3:8000/api/getData12'):
+        this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban1' && this.props.answere5 == 'jawaban2' && this.props.answere6 == 'jawaban1'? fetch('http://192.168.8.3:8000/api/getData13'):
+        this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban1' && this.props.answere5 == 'jawaban2' && this.props.answere6 == 'jawaban2'? fetch('http://192.168.8.3:8000/api/getData14'):
+        this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban1' && this.props.answere5 == 'jawaban1' && this.props.answere6 == 'jawaban2'? fetch('http://192.168.8.3:8000/api/getData15'):
+        this.props.answere2 == 'jawaban1' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban2' && this.props.answere5 == 'jawaban1' && this.props.answere6 == 'jawaban2'? fetch('http://192.168.8.3:8000/api/getData16'):
         
-        // this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban1' , this.props.answere5 == 'jawaban 1' && this.props.answere6 == 'jawaban1' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData17'):
-        // this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban2' , this.props.answere5 == 'jawaban 1' && this.props.answere6 == 'jawaban1' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData18'):
-        // this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban2' , this.props.answere5 == 'jawaban 2' && this.props.answere6 == 'jawaban1' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData19'):
-        // this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban2' , this.props.answere5 == 'jawaban 2' && this.props.answere6 == 'jawaban2' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData20'):
-        // this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban1' , this.props.answere5 == 'jawaban 2' && this.props.answere6 == 'jawaban1' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData21'):
-        // this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban1' , this.props.answere5 == 'jawaban 2' && this.props.answere6 == 'jawaban2' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData22'):
-        // this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban1' , this.props.answere5 == 'jawaban 1' && this.props.answere6 == 'jawaban2' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData23'):
-        // this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban2' , this.props.answere5 == 'jawaban 1' && this.props.answere6 == 'jawaban2' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData24'):
+        this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban1' && this.props.answere5 == 'jawaban1' && this.props.answere6 == 'jawaban1'? fetch('http://192.168.8.3:8000/api/getData17'):
+        this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban2' && this.props.answere5 == 'jawaban1' && this.props.answere6 == 'jawaban1'? fetch('http://192.168.8.3:8000/api/getData18'):
+        this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban2' && this.props.answere5 == 'jawaban2' && this.props.answere6 == 'jawaban1'? fetch('http://192.168.8.3:8000/api/getData19'):
+        this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban2' && this.props.answere5 == 'jawaban2' && this.props.answere6 == 'jawaban2'? fetch('http://192.168.8.3:8000/api/getData20'):
+        this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban1' && this.props.answere5 == 'jawaban2' && this.props.answere6 == 'jawaban1'? fetch('http://192.168.8.3:8000/api/getData21'):
+        this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban1' && this.props.answere5 == 'jawaban2' && this.props.answere6 == 'jawaban2'? fetch('http://192.168.8.3:8000/api/getData22'):
+        this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban1' && this.props.answere5 == 'jawaban1' && this.props.answere6 == 'jawaban2'? fetch('http://192.168.8.3:8000/api/getData23'):
+        this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban2' && this.props.answere5 == 'jawaban1' && this.props.answere6 == 'jawaban2'? fetch('http://192.168.8.3:8000/api/getData24'):
         
-        // this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban1' , this.props.answere5 == 'jawaban 1' && this.props.answere6 == 'jawaban1' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData25'):
-        // this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban2' , this.props.answere5 == 'jawaban 1' && this.props.answere6 == 'jawaban1' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData26'):
-        // this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban2' , this.props.answere5 == 'jawaban 2' && this.props.answere6 == 'jawaban1' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData27'):
-        // this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban2' , this.props.answere5 == 'jawaban 2' && this.props.answere6 == 'jawaban2' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData28'):
-        // this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban1' , this.props.answere5 == 'jawaban 2' && this.props.answere6 == 'jawaban1' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData29'):
-        // this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban1' , this.props.answere5 == 'jawaban 2' && this.props.answere6 == 'jawaban2' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData30'):
-        // this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban1' , this.props.answere5 == 'jawaban 1' && this.props.answere6 == 'jawaban2' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData31'):
-        // this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban2' , this.props.answere5 == 'jawaban 1' && this.props.answere6 == 'jawaban2' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData32'):
+        this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban1' && this.props.answere5 == 'jawaban1' && this.props.answere6 == 'jawaban1'? fetch('http://192.168.8.3:8000/api/getData25'):
+        this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban2' && this.props.answere5 == 'jawaban1' && this.props.answere6 == 'jawaban1'? fetch('http://192.168.8.3:8000/api/getData26'):
+        this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban2' && this.props.answere5 == 'jawaban2' && this.props.answere6 == 'jawaban1'? fetch('http://192.168.8.3:8000/api/getData27'):
+        this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban2' && this.props.answere5 == 'jawaban2' && this.props.answere6 == 'jawaban2'? fetch('http://192.168.8.3:8000/api/getData28'):
+        this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban1' && this.props.answere5 == 'jawaban2' && this.props.answere6 == 'jawaban1'? fetch('http://192.168.8.3:8000/api/getData29'):
+        this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban1' && this.props.answere5 == 'jawaban2' && this.props.answere6 == 'jawaban2'? fetch('http://192.168.8.3:8000/api/getData30'):
+        this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban1' && this.props.answere5 == 'jawaban1' && this.props.answere6 == 'jawaban2'? fetch('http://192.168.8.3:8000/api/getData31'):
+        this.props.answere2 == 'jawaban2' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban2' && this.props.answere5 == 'jawaban1' && this.props.answere6 == 'jawaban2'? fetch('http://192.168.8.3:8000/api/getData32'):
 
-        // this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban1' , this.props.answere5 == 'jawaban 1' && this.props.answere6 == 'jawaban1' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData33'):
-        // this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban2' , this.props.answere5 == 'jawaban 1' && this.props.answere6 == 'jawaban1' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData34'):
-        // this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban2' , this.props.answere5 == 'jawaban 2' && this.props.answere6 == 'jawaban1' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData35'):
-        // this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban2' , this.props.answere5 == 'jawaban 2' && this.props.answere6 == 'jawaban2' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData36'):
-        // this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban1' , this.props.answere5 == 'jawaban 2' && this.props.answere6 == 'jawaban1' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData37'):
-        // this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban1' , this.props.answere5 == 'jawaban 2' && this.props.answere6 == 'jawaban2' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData38'):
-        // this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban1' , this.props.answere5 == 'jawaban 1' && this.props.answere6 == 'jawaban2' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData39'):
-        // this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban2' , this.props.answere5 == 'jawaban 1' && this.props.answere6 == 'jawaban2' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData40'):
+        this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban1' && this.props.answere5 == 'jawaban1' && this.props.answere6 == 'jawaban1'? fetch('http://192.168.8.3:8000/api/getData33'):
+        this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban2' && this.props.answere5 == 'jawaban1' && this.props.answere6 == 'jawaban1'? fetch('http://192.168.8.3:8000/api/getData34'):
+        this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban2' && this.props.answere5 == 'jawaban2' && this.props.answere6 == 'jawaban1'? fetch('http://192.168.8.3:8000/api/getData35'):
+        this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban2' && this.props.answere5 == 'jawaban2' && this.props.answere6 == 'jawaban2'? fetch('http://192.168.8.3:8000/api/getData36'):
+        this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban1' && this.props.answere5 == 'jawaban2' && this.props.answere6 == 'jawaban1'? fetch('http://192.168.8.3:8000/api/getData37'):
+        this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban1' && this.props.answere5 == 'jawaban2' && this.props.answere6 == 'jawaban2'? fetch('http://192.168.8.3:8000/api/getData38'):
+        this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban1' && this.props.answere5 == 'jawaban1' && this.props.answere6 == 'jawaban2'? fetch('http://192.168.8.3:8000/api/getData39'):
+        this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban1' && this.props.answere4 == 'jawaban2' && this.props.answere5 == 'jawaban1' && this.props.answere6 == 'jawaban2'? fetch('http://192.168.8.3:8000/api/getData40'):
 
-        // this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban1' , this.props.answere5 == 'jawaban 1' && this.props.answere6 == 'jawaban1' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData41'):
-        // this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban2' , this.props.answere5 == 'jawaban 1' && this.props.answere6 == 'jawaban1' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData42'):
-        // this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban2' , this.props.answere5 == 'jawaban 2' && this.props.answere6 == 'jawaban1' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData43'):
-        // this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban2' , this.props.answere5 == 'jawaban 2' && this.props.answere6 == 'jawaban2' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData44'):
-        // this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban1' , this.props.answere5 == 'jawaban 2' && this.props.answere6 == 'jawaban1' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData45'):
-        // this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban1' , this.props.answere5 == 'jawaban 2' && this.props.answere6 == 'jawaban2' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData46'):
-        // this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban1' , this.props.answere5 == 'jawaban 1' && this.props.answere6 == 'jawaban2' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData47'):
-        // this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban2' , this.props.answere5 == 'jawaban 1' && this.props.answere6 == 'jawaban2' ? fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData48'):
-        fetch('http://rt668i43rhf9042n.000webhostapp.com/api/getData3')
+        this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban1' && this.props.answere5 == 'jawaban1' && this.props.answere6 == 'jawaban1'? fetch('http://192.168.8.3:8000/api/getData41'):
+        this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban2' && this.props.answere5 == 'jawaban1' && this.props.answere6 == 'jawaban1'? fetch('http://192.168.8.3:8000/api/getData42'):
+        this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban2' && this.props.answere5 == 'jawaban2' && this.props.answere6 == 'jawaban1'? fetch('http://192.168.8.3:8000/api/getData43'):
+        this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban2' && this.props.answere5 == 'jawaban2' && this.props.answere6 == 'jawaban2'? fetch('http://192.168.8.3:8000/api/getData44'):
+        this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban1' && this.props.answere5 == 'jawaban2' && this.props.answere6 == 'jawaban1'? fetch('http://192.168.8.3:8000/api/getData45'):
+        this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban1' && this.props.answere5 == 'jawaban2' && this.props.answere6 == 'jawaban2'? fetch('http://192.168.8.3:8000/api/getData46'):
+        this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban1' && this.props.answere5 == 'jawaban1' && this.props.answere6 == 'jawaban2'? fetch('http://192.168.8.3:8000/api/getData47'):
+        this.props.answere2 == 'jawaban3' && this.props.answere3 == 'jawaban2' && this.props.answere4 == 'jawaban2' && this.props.answere5 == 'jawaban1' && this.props.answere6 == 'jawaban2'? fetch('http://192.168.8.3:8000/api/getData48'):
+        fetch('http://192.168.8.3:8000/api/getData3')
       )
       .then((response) => response.json())
       .then((responseJson) => {
-
         this.setState({
           isLoading: false,
           dataSource: responseJson.data,
@@ -98,41 +96,29 @@ class Result extends React.Component {
       else{
           return (
             <View style={styles.container}>
-            
-            <View style={styles.title}>
-              <Text>HASIL</Text>
-              <Text>{ this.props.detailValues }</Text>
-            </View>
-
-            <View style={styles.content}>
-            <ScrollView>
-              <Container style={{ backgroundColor:'#d5f6ffff', paddingLeft: ('5%'), paddingRight: ('5%'),}}>   
+              <View style={{paddingTop: '60%',paddingBottom: '35%', borderBottomRightRadius: 200, backgroundColor:'#81D4FA' }}>
+              </View>
+              <View style={{ top: '-52%', marginHorizontal: '5%'}}>
+              <ScrollView>
                 {
                   this.state.dataSource.map((val, key) => {
                     return( 
-                      <Card key={key}>
-                        <CardItem style={{  backgroundColor:'#3498db' }}>
-                          <Body style={{  }}>
-                            <Text style={{ color:'white', fontWeight: 'bold', fontSize: 28, }}>
-                              {val.nama}
-                            </Text>
-                            <Text style={{ color:'white', fontSize: 18, }}>
-                              {val.modal}
-                            </Text>
-                          </Body>
-                        </CardItem>
+                      <View key={key} style={{paddingTop: '5%'}}>
+                        <View style={{ borderTopLeftRadius: 20, borderTopRightRadius: 20, borderBottomRightRadius: 20, backgroundColor: '#2c82c9', paddingVertical:'5%', paddingHorizontal:'8%' }}>
+                         <Text style={{ color:'white', fontWeight:'bold', fontSize:30 }}>{val.nama}</Text> 
+                         <Text style={{ color:'white', paddingLeft:'5%', fontSize:20 }}>{val.jenis}</Text> 
+                        </View>
                         <TouchableOpacity onPress={ (e)=> {Actions.Detail(); this.props.detailValue(val.id); }}>
-                          <CardItem footer style={{ backgroundColor:'#2e84e0ff', flexDirection: "row", justifyContent: "center" }}>
-                            <Text style={{ color:'white', fontSize: 15, }}>Detail</Text>
-                          </CardItem>
+                          <View style={{borderBottomLeftRadius: 20, borderBottomRightRadius: 20, backgroundColor: '#3498db', paddingVertical:'5%', width:'80%' }}>
+                            <Text style={{ fontWeight:'bold', color:'white', paddingLeft:'5%', fontSize:15, textAlign:'center' }}>Detail</Text>
+                          </View>
                         </TouchableOpacity>
-                      </Card>
+                      </View>
                     )
                   })
                 }
-              </Container>
-            </ScrollView>
-            </View>
+              </ScrollView>
+              </View>
             </View>
           )
       }
@@ -162,8 +148,6 @@ function mapDispatchToProps(dispatch) {
 const styles = StyleSheet.create({
     container:{
         flex:1,
-        flexDirection: 'column',
-        justifyContent: 'center',
         backgroundColor:'#d5f6ffff',
     },
     title:{
@@ -172,7 +156,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     content:{
-        flex:5,
+      // top: -10
     }
 });
 

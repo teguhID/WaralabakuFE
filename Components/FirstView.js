@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, Button, TouchableOpacity , Image } from 'react-native';
+import { StyleSheet, View, TouchableOpacity , Image } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 
-type Props = {};
-export default class FirstView extends Component<Props> {
+export default class FirstView extends Component {
 render() {
         return (
             <View style={styles.container}>

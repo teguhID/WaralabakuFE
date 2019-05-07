@@ -9,9 +9,9 @@ const AppNavigator = () => {
     return (
     <Router>
         <Stack>
-            <Scene key="FirstView" component={FirstView}  hideNavBar={true} />
+            <Scene key="FirstView" component={FirstView}  hideNavBar={true} initial/>
             <Scene key="Quisioner" component={Quisioner}  hideNavBar={true} />
-            <Scene key="Result" component={Result}  hideNavBar={true} initial />
+            <Scene key="Result" component={Result}  hideNavBar={true}  />
             <Scene key="Detail" component={Detail} hideNavBar={true} />
         </Stack>
     </Router>
