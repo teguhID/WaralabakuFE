@@ -10,8 +10,8 @@ class History extends Component {
     super(props);
     this.state ={ 
       isLoading: true,
-      url: 'http://10.0.0.167:8001/',
-      // url: 'http://192.168.43.234:8001/',
+      // url: 'http://10.0.0.167:8001/',
+      url: 'http://192.168.43.234:8001/',
     }
   }
 
@@ -47,21 +47,12 @@ class History extends Component {
     }
     var rowID = 1
     return(
-      <View style={{flex: 1, paddingTop:20}}>
+      <View style={{flex: 1, paddingTop:20, backgroundColor:'#d5f6ffff'}}>
         <ScrollView>
         {
           this.state.dataSource.map((val, key) => {
             return( 
-              <View key={key} style={{paddingTop: '5%', paddingHorizontal: '5%'}}>
-                <View style={{ borderTopLeftRadius: 20, borderTopRightRadius: 20, borderBottomRightRadius: 20, backgroundColor: '#2c82c9', paddingVertical:'5%', paddingHorizontal:'8%' }}>
-                  <Text style={{ color:'white', fontWeight:'bold', fontSize:30 }}> History {rowID++}</Text> 
-                  <Text>ID : { val.no }</Text>
-                  <Text>Jawaban2 : { val.jawaban2 }</Text>
-                  <Text>Jawaban3 : { val.jawaban3 }</Text>
-                  <Text>Jawaban4 : { val.jawaban4 }</Text>
-                  <Text>Jawaban5 : { val.jawaban5 }</Text>
-                  <Text>Jawaban6 : { val.jawaban6 }</Text>
-                </View>
+              <View key={key} style={{paddingTop: '5%', paddingHorizontal: '5%'}}>  
                 <TouchableOpacity onPress={ async ()=> {
                   AsyncStorage.setItem('jawaban2', val.jawaban2)
                   AsyncStorage.setItem('jawaban3', val.jawaban3)
@@ -74,13 +65,19 @@ class History extends Component {
                   this.props.history_Jawaban4(await AsyncStorage.getItem('jawaban4'))
                   this.props.history_Jawaban5(await AsyncStorage.getItem('jawaban5'))
                   this.props.history_Jawaban6(await AsyncStorage.getItem('jawaban6'))
-                  alert(await AsyncStorage.multiGet(['jawaban2', 'jawaban3', 'jawaban4', 'jawaban5', 'jawaban6',]) + ' ------------ jawaban2 : ' + this.props.jawaban2 + ' jawaban3 : ' + this.props.jawaban3 + ' jawaban4 : ' + this.props.jawaban4 + ' jawaban5 : ' + this.props.jawaban5 + ' jawaban6 : ' + this.props.jawaban6 + '-----------')
+                  // alert(await AsyncStorage.multiGet(['jawaban2', 'jawaban3', 'jawaban4', 'jawaban5', 'jawaban6',]) + ' ------------ jawaban2 : ' + this.props.jawaban2 + ' jawaban3 : ' + this.props.jawaban3 + ' jawaban4 : ' + this.props.jawaban4 + ' jawaban5 : ' + this.props.jawaban5 + ' jawaban6 : ' + this.props.jawaban6 + '-----------')
                   Actions.Result()
 
                 }}>
-                  <View style={{borderBottomLeftRadius: 20, borderBottomRightRadius: 20, backgroundColor: '#3498db', paddingVertical:'5%', width:'80%' }}>
-                    <Text style={{ fontWeight:'bold', color:'white', paddingLeft:'5%', fontSize:15, textAlign:'center' }}>Detail</Text>
-                  </View>
+                <View style={{ borderTopLeftRadius: 20, borderTopRightRadius: 20, borderBottomRightRadius: 20, borderBottomLeftRadius: 20, backgroundColor: '#006680ff', paddingVertical:'5%', paddingHorizontal:'8%' }}>
+                  <Text style={{ color:'white', fontWeight:'bold', fontSize:30 }}> History {rowID++}</Text> 
+                  {/* <Text>ID : { val.no }</Text>
+                  <Text>Jawaban2 : { val.jawaban2 }</Text>
+                  <Text>Jawaban3 : { val.jawaban3 }</Text>
+                  <Text>Jawaban4 : { val.jawaban4 }</Text>
+                  <Text>Jawaban5 : { val.jawaban5 }</Text>
+                  <Text>Jawaban6 : { val.jawaban6 }</Text> */}
+                </View>
                 </TouchableOpacity>
               </View>
             )

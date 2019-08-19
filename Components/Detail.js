@@ -47,21 +47,51 @@ class Detail extends Component {
             return(
               <View key={key} style={styles.container}>
                     <View style={styles.title}>
-                      <Text> {val.nama} </Text>
+                      <Text style={{ fontSize: 24, paddingTop: 15, }}> {val.nama} </Text>
                     </View>
                     <View style={styles.content}>
                       <ScrollView>
                         <Text>ID : { this.props.detailValues }</Text>
-                        <Text style={{ color:'#2980b9', fontWeight: "bold", paddingTop:'3%', fontSize: 18, }}>Alamat : <Text style={{ color: '',fontSize: 16 }}>{val.alamat}</Text></Text>
-                        <Text style={{ color:'#2980b9', fontWeight: "bold", paddingTop:'3%', fontSize: 18, }}>jenis waralaba : {val.jenis}</Text>
-                        <Text style={{ color:'#2980b9', fontWeight: "bold", paddingTop:'3%', fontSize: 18, }}>jumlah gerai : {val.gerai}</Text>
-                        <Text style={{ color:'#2980b9', fontWeight: "bold", paddingTop:'3%', fontSize: 18, }}>minimal modal : {val.modal}</Text>
-                        <Text style={{ color:'#2980b9', fontWeight: "bold", paddingTop:'3%', fontSize: 18, }}>perkiraan bep : {val.bep}</Text>
-                        <Text style={{ color:'#2980b9', fontWeight: "bold", paddingTop:'3%', fontSize: 18, }}>fanchise fee : {val.fee}</Text>
-                        <Text style={{ color:'#2980b9', fontWeight: "bold", paddingTop:'3%', fontSize: 18, }}>keuntungan : {val.keuntungan}</Text>
-                        <Text style={{ color:'#2980b9', fontWeight: "bold", paddingTop:'3%', fontSize: 18, }}>contact : {val.phone}</Text>
-                        <Text style={{ color:'#2980b9', fontWeight: "bold", paddingTop:'3%', fontSize: 18, }}>email : {val.email}</Text>
-                        <Text style={{ color:'#2980b9', fontWeight: "bold", paddingTop:'3%', fontSize: 18, }}>web : {val.web}</Text>
+                        <Text style={{ color:'#1e272e', fontWeight: "bold", paddingTop:'3%', fontSize: 20, }}>Alamat : </Text>
+                        <Text style={{ color:'#34495e',fontSize: 17, paddingBottom:5, }}>{val.alamat}</Text>
+                        <View style={{borderBottomColor: '#808e9b',borderBottomWidth: 1,}}/>
+
+                        <Text style={{ color:'#1e272e', fontWeight: "bold", paddingTop:'3%', fontSize: 20, }}>jenis waralaba : </Text>
+                        <Text style={{ color:'#34495e',fontSize: 17, paddingBottom:5, }}>{val.jenis}</Text>
+                        <View style={{borderBottomColor: '#808e9b',borderBottomWidth: 1,}}/>
+
+                        <Text style={{ color:'#1e272e', fontWeight: "bold", paddingTop:'3%', fontSize: 20, }}>jumlah gerai : </Text>
+                        <Text style={{ color:'#34495e',fontSize: 17, paddingBottom:5, }}>{val.gerai}</Text>
+                        <View style={{borderBottomColor: '#808e9b',borderBottomWidth: 1,}}/>
+
+                        <Text style={{ color:'#1e272e', fontWeight: "bold", paddingTop:'3%', fontSize: 20, }}>minimal modal : </Text>
+                        <Text style={{ color:'#34495e',fontSize: 17, paddingBottom:5, }}>{val.modal}</Text>
+                        <View style={{borderBottomColor: '#808e9b',borderBottomWidth: 1,}}/>
+
+                        <Text style={{ color:'#1e272e', fontWeight: "bold", paddingTop:'3%', fontSize: 20, }}>perkiraan bep : </Text>
+                        <Text style={{ color:'#34495e',fontSize: 17, paddingBottom:5, }}>{val.bep}</Text>
+                        <View style={{borderBottomColor: '#808e9b',borderBottomWidth: 1,}}/>
+
+                        <Text style={{ color:'#1e272e', fontWeight: "bold", paddingTop:'3%', fontSize: 20, }}>Royalti fee : </Text>
+                        <Text style={{ color:'#34495e',fontSize: 17, paddingBottom:5, }}>{val.fee}</Text>
+                        <View style={{borderBottomColor: '#808e9b',borderBottomWidth: 1,}}/>
+
+                        <Text style={{ color:'#1e272e', fontWeight: "bold", paddingTop:'3%', fontSize: 20, }}>keuntungan : </Text>
+                        <Text style={{ color:'#34495e',fontSize: 17, paddingBottom:5, }}>{val.keuntungan}</Text>
+                        <View style={{borderBottomColor: '#808e9b',borderBottomWidth: 1,}}/>
+
+                        <Text style={{ color:'#1e272e', fontWeight: "bold", paddingTop:'3%', fontSize: 20, }}>contact : </Text>
+                        <Text style={{ color:'#34495e',fontSize: 17, paddingBottom:5, }}>{val.phone}</Text>
+                        <View style={{borderBottomColor: '#808e9b',borderBottomWidth: 1,}}/>
+                        
+                        <Text style={{ color:'#1e272e', fontWeight: "bold", paddingTop:'3%', fontSize: 20, }}>email : </Text>
+                        <Text style={{ color:'#34495e',fontSize: 17, paddingBottom:5, }}>{val.email}</Text>
+                        <View style={{borderBottomColor: '#808e9b',borderBottomWidth: 1,}}/>
+
+                        <Text style={{ color:'#1e272e', fontWeight: "bold", paddingTop:'3%', fontSize: 20, }}>web : </Text>
+                        <Text style={{ color:'#34495e',fontSize: 17, paddingBottom:5, }}>{val.web}</Text>
+                        <View style={{borderBottomColor: '#808e9b',borderBottomWidth: 1,}}/>
+
                       </ScrollView>
                     </View>
               </View>
@@ -88,11 +118,10 @@ const styles = StyleSheet.create({
     flex:1,
     alignItems: 'center',
     justifyContent: 'center',
-    fontSize: 25
   },
   content:{
     flex:8,
-    paddingHorizontal: '10%',
+    padding: '10%',
   },
 })
 
