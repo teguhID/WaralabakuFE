@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, ScrollView, ActivityIndicator, View } from 'react-native'
+import { StyleSheet, Text, ScrollView, ActivityIndicator, TouchableOpacity, View, Image } from 'react-native'
 // import { LinearGradient } from 'expo'
+import {Actions} from 'react-native-router-flux'
 import { connect } from 'react-redux'
 
 class Detail extends Component {
@@ -9,8 +10,9 @@ class Detail extends Component {
     super(props);
     this.state ={ 
         isLoading: true,
-        url: 'http://192.168.43.234:8001/',
+        // url: 'http://192.168.43.234:8001/',
         // url: 'http://10.0.0.167:8001/',
+        url: 'https://waralabaku.000webhostapp.com/',
     }
   }
   
@@ -93,6 +95,9 @@ class Detail extends Component {
                         <View style={{borderBottomColor: '#808e9b',borderBottomWidth: 1,}}/>
 
                       </ScrollView>
+                      <TouchableOpacity style={{ paddingTop: 20, alignItems: 'center', }} onPress={ ()=>Actions.KuisionerHasil() }>
+                            <Image source={require('./../Components/images/Home.png')}/>
+                      </TouchableOpacity>
                     </View>
               </View>
             )
@@ -121,7 +126,9 @@ const styles = StyleSheet.create({
   },
   content:{
     flex:8,
-    padding: '10%',
+    paddingTop: '10%',
+    paddingHorizontal: '10%',
+    paddingBottom: '5%'
   },
 })
 

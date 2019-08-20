@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, ScrollView, Text, ActivityIndicator, View, TouchableOpacity,Button  } from 'react-native';
+import { StyleSheet, ScrollView, Text, ActivityIndicator, View, TouchableOpacity, Image  } from 'react-native';
 import { connect } from 'react-redux'
 import { Actions } from 'react-native-router-flux'
 
@@ -10,8 +10,9 @@ class Result extends React.Component {
     this.state = { 
         isLoading: true,
         dataSource : null,
-        url: 'http://192.168.43.234:8001/',
+        // url: 'http://192.168.43.234:8001/',
         // url: 'http://10.0.0.167:8001/',
+        url: 'https://waralabaku.000webhostapp.com/',
       }
   }
 
@@ -98,7 +99,7 @@ class Result extends React.Component {
           return (
             <View style={styles.container}>
               <Text style={styles.title}>Rekomendasi Untuk Kamu</Text>
-              <View style={{ marginHorizontal: '5%'}}>
+              <View style={{ margin: '5%', paddingBottom: '10%'}}>
               <ScrollView>
                 {
                   this.state.dataSource.map((val, key) => {
@@ -115,6 +116,9 @@ class Result extends React.Component {
                   })
                 }
               </ScrollView>
+              <TouchableOpacity style={{ paddingTop: 20, paddingHorizontal:5, alignItems:'center' }} onPress={ ()=>Actions.FirstView() }>
+                  <Image source={require('./../Components/images/Home.png')}/>
+              </TouchableOpacity>
               </View>
             </View>
           )

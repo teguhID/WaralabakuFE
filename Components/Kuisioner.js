@@ -25,8 +25,9 @@ class Kuisioner extends Component {
             jawaban5 : '',
             jawaban6 : '',
             jawaban7 : '',
-            url: 'http://192.168.43.234:8001/',
-            // url: 'http://10.0.0.167:8001/',
+            // url: 'http://192.168.43.234:8001/',
+            // url: 'http://10.0.0.167:8001/',,
+            url: 'https://waralabaku.000webhostapp.com/',
         }
     }
 
@@ -105,7 +106,7 @@ class Kuisioner extends Component {
         }
         if (this.state.jumlahPertanyaan == 6) { //PERTANYAAN PERTAMA
             this.setState({
-                pertanyaan:'Apakah anda sebelumnya pernah berbisnis waralaba ?',
+                pertanyaan:'Apakah anda sebelumnya pernah mencoba usaha waralaba ?',
                 jawaban: [
                     {label: 'ya', value: '1'},
                     {label: 'tidak', value: '2'},
@@ -178,7 +179,7 @@ class Kuisioner extends Component {
                 <Text></Text> */}
                 {/* <Text>Pertanyaan : {this.state.jumlahPertanyaan}</Text>
                 <Text></Text> */}
-                <Text style={{ paddingBottom:'10%', fontSize: 20, }}>{this.state.pertanyaan}</Text>
+                <Text style={{ paddingBottom:'10%', fontSize: 20, textAlign:'center' }}>{this.state.pertanyaan}</Text>
                 <RadioForm
                     radio_props={this.state.jawaban}
                     initial={0}

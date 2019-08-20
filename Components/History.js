@@ -11,7 +11,8 @@ class History extends Component {
     this.state ={ 
       isLoading: true,
       // url: 'http://10.0.0.167:8001/',
-      url: 'http://192.168.43.234:8001/',
+      // url: 'http://192.168.43.234:8001/',
+      url: 'https://waralabaku.000webhostapp.com/',
     }
   }
 
