@@ -12,9 +12,9 @@ class AppNavigator extends Component {
         return (
             <Router>
                 <Scene key="root">  
-                    <Scene key="FirstView" component={FirstView} hideNavBar={true} />
+                    <Scene key="FirstView" component={FirstView} hideNavBar={true} initial/>
                     <Scene key="Kuisioner" component={Kuisioner} title="" />
-                    <Scene key="Result" component={Result} hideNavBar={true} title="Result" initial />    
+                    <Scene key="Result" component={Result} hideNavBar={true} title="Result"  />    
                     <Scene key="Detail" component={Detail} title="Detail" />    
                     <Scene key="History" component={History} title="History" />    
                     <Scene key="KuisionerHasil" component={KuisionerHasil} title="Kuisioner" />    

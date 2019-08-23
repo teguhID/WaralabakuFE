@@ -99,8 +99,8 @@ class Result extends React.Component {
           return (
             <View style={styles.container}>
               <Text style={styles.title}>Rekomendasi Untuk Kamu</Text>
-              <View style={{ margin: '5%', paddingBottom: '10%'}}>
-              <ScrollView>
+              <View style={{ marginHorizontal: '5%', paddingBottom: '10%'}}>
+              <ScrollView style={{ height:'85%' }}>
                 {
                   this.state.dataSource.map((val, key) => {
                     return( 

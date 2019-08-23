@@ -78,6 +78,7 @@ class History extends Component {
                   <Text>Jawaban4 : { val.jawaban4 }</Text>
                   <Text>Jawaban5 : { val.jawaban5 }</Text>
                   <Text>Jawaban6 : { val.jawaban6 }</Text> */}
+                  <Text style={{ color:'white' }}>{val.created_at}</Text>
                 </View>
                 </TouchableOpacity>
               </View>
